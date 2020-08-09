@@ -92,17 +92,13 @@ export default function postLoading() {
 	}
 
 	function* contentGenerator() {
-		let templateJSON = fetch("../../fake_server/template.json").then(
-			(responce) => {
-				return responce.json();
-			}
-		);
+		let templateJSON = fetch("./fake_server/template.json").then((responce) => {
+			return responce.json();
+		});
 
-		let templateHTML = fetch("../../fake_server/template.html").then(
-			(responce) => {
-				return responce.text();
-			}
-		);
+		let templateHTML = fetch("./fake_server/template.html").then((responce) => {
+			return responce.text();
+		});
 
 		while (true) {
 			canvasWrap.classList.add("_hideBtnOrLoading");
