@@ -1,0 +1,18 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+	resize: none;
+	outline: none;
+	overflow: none;
+	outline-offset: 0;
+	border: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	background-color: transparent;
+}
+
+a {
+	color: inherit;
+}

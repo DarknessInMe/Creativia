@@ -1,0 +1,34 @@
+[
+	{
+		"image": "./images/blog/news-3.jpg",
+		"header": "Loaded post 1",
+		"user": "admin",
+		"views": 1111,
+		"comments": 1111,
+		"content": "Fake server imitation. Some meanless text could be here. For example, positive reviews of the Batllefield V."
+	},
+	{
+		"image": "./images/blog/news-4.jpg",
+		"header": "Loaded post 2",
+		"user": "admin",
+		"views": 1111,
+		"comments": 1111,
+		"content": "Fake server imitation. Some meanless text could be here. Lorem ipsum is too commonplace"
+	},
+	{
+		"image": "./images/blog/news-5.jpg",
+		"header": "Loaded post 3",
+		"user": "admin",
+		"views": 2222,
+		"comments": 2222,
+		"content": "Fake server imitation. Some meanless text could be here. I would be joking here, but I'm afraid you won't understand my humor"
+	},
+	{
+		"image": "./images/blog/news-6.jpg",
+		"header": "Loaded post 4",
+		"user": "admin",
+		"views": 2222,
+		"comments": 2222,
+		"content": "Fake server imitation. Some meanless text could be here. Last post"
+	}
+]
