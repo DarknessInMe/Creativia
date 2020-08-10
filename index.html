@@ -304,7 +304,7 @@
 						</div>
 						<div class="portfolio-main">
 							<div class="port-row">
-								<div class="port-wrapper _bigger-wrapper" aria-haspopup="true">
+								<div class="port-wrapper _bigger-wrapper">
 									<img
 										src="images/portfolio/money.jpg"
 										alt=""
@@ -315,7 +315,7 @@
 										<span>design name</span>
 									</div>
 								</div>
-								<div class="port-wrapper" aria-haspopup="true">
+								<div class="port-wrapper">
 									<img
 										src="images/portfolio/bank.jpg"
 										alt=""
@@ -326,7 +326,7 @@
 										<span>design name</span>
 									</div>
 								</div>
-								<div class="port-wrapper _bigger-wrapper" aria-haspopup="true">
+								<div class="port-wrapper _bigger-wrapper">
 									<img
 										src="images/portfolio/flowerpot.jpg"
 										alt=""
@@ -337,7 +337,7 @@
 										<span>design name</span>
 									</div>
 								</div>
-								<div class="port-wrapper" aria-haspopup="true">
+								<div class="port-wrapper">
 									<img
 										src="images/portfolio/cards.jpg"
 										alt=""
@@ -348,7 +348,7 @@
 										<span>design name</span>
 									</div>
 								</div>
-								<div class="port-wrapper" aria-haspopup="true">
+								<div class="port-wrapper">
 									<img
 										src="images/portfolio/calc.jpg"
 										alt=""
@@ -359,7 +359,7 @@
 										<span>design name</span>
 									</div>
 								</div>
-								<div class="port-wrapper _bigger-wrapper" aria-haspopup="true">
+								<div class="port-wrapper _bigger-wrapper">
 									<img
 										src="images/portfolio/convert.jpg"
 										alt=""
@@ -370,7 +370,7 @@
 										<span>design name</span>
 									</div>
 								</div>
-								<div class="port-wrapper" aria-haspopup="true">
+								<div class="port-wrapper">
 									<img
 										src="images/portfolio/wallet.jpg"
 										alt=""
@@ -381,7 +381,7 @@
 										<span>design name</span>
 									</div>
 								</div>
-								<div class="port-wrapper _bigger-wrapper" aria-haspopup="true">
+								<div class="port-wrapper _bigger-wrapper">
 									<img
 										src="images/portfolio/check.jpg"
 										alt=""
@@ -627,7 +627,7 @@
 							</div>
 							<div class="teamwork-main">
 								<div class="teamwork-cards">
-									<div class="teamwork-card" aria-haspopup="true">
+									<div class="teamwork-card" tabindex="0">
 										<div
 											class="card-photo"
 											data-lazy="background"
@@ -653,7 +653,7 @@
 											<div class="title-prof">Webdesigner</div>
 										</div>
 									</div>
-									<div class="teamwork-card" aria-haspopup="true">
+									<div class="teamwork-card" tabindex="1">
 										<div
 											class="card-photo"
 											data-lazy="background"
@@ -679,7 +679,7 @@
 											<div class="title-prof">Webdesigner</div>
 										</div>
 									</div>
-									<div class="teamwork-card" aria-haspopup="true">
+									<div class="teamwork-card" tabindex="2">
 										<div
 											class="card-photo"
 											data-lazy="background"
@@ -705,7 +705,7 @@
 											<div class="title-prof">Webdesigner</div>
 										</div>
 									</div>
-									<div class="teamwork-card" aria-haspopup="true">
+									<div class="teamwork-card" tabindex="3">
 										<div
 											class="card-photo"
 											data-lazy="background"
@@ -870,7 +870,7 @@
 								</div>
 							</div>
 							<div class="services-main">
-								<div class="service-item" aria-haspopup="true">
+								<div class="service-item">
 									<div class="service-title">
 										<div class="service-icon_item _fa-wrap">
 											<canvas
@@ -891,7 +891,7 @@
 										amet nulla sollicitudin.
 									</div>
 								</div>
-								<div class="service-item" aria-haspopup="true">
+								<div class="service-item">
 									<div class="service-title">
 										<div class="service-icon_item _fa-wrap">
 											<canvas
@@ -912,7 +912,7 @@
 										amet nulla sollicitudin.
 									</div>
 								</div>
-								<div class="service-item" aria-haspopup="true">
+								<div class="service-item">
 									<div class="service-title">
 										<div class="service-icon_item _fa-wrap">
 											<canvas
@@ -933,7 +933,7 @@
 										amet nulla sollicitudin.
 									</div>
 								</div>
-								<div class="service-item" aria-haspopup="true">
+								<div class="service-item">
 									<div class="service-title">
 										<div class="service-icon_item _fa-wrap">
 											<canvas
@@ -954,7 +954,7 @@
 										amet nulla sollicitudin.
 									</div>
 								</div>
-								<div class="service-item" aria-haspopup="true">
+								<div class="service-item">
 									<div class="service-title">
 										<div class="service-icon_item _fa-wrap">
 											<canvas
@@ -975,7 +975,7 @@
 										amet nulla sollicitudin.
 									</div>
 								</div>
-								<div class="service-item" aria-haspopup="true">
+								<div class="service-item">
 									<div class="service-title">
 										<div class="service-icon_item _fa-wrap">
 											<canvas
@@ -1349,15 +1349,31 @@
 									</div>
 									<form action="" class="contact-form" name="send-message">
 										<span class="form-title">send message</span>
-										<input type="text" name="name" placeholder="Name" />
-										<input type="email" name="mail" placeholder="Email" />
-										<input type="text" name="subject" placeholder="subject" />
+										<input
+											type="text"
+											name="name"
+											placeholder="Name"
+											required
+										/>
+										<input
+											type="email"
+											name="mail"
+											placeholder="Email"
+											required
+										/>
+										<input
+											type="text"
+											name="subject"
+											placeholder="subject"
+											required
+										/>
 										<textarea
 											name="message"
 											id=""
 											cols="30"
 											rows="10"
 											maxlength="250"
+											required
 										></textarea>
 										<div class="contact-btn-wrap">
 											<button class="contact-btn">submit</button>

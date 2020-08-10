@@ -365,28 +365,7 @@ header .nav-body {
 	background-color: #ff0036;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-	.nav-items .nav-item {
-		font-size: 15px;
-	}
-	.nav-item::before {
-		margin-bottom: 18px;
-	}
-	.nav-item::after {
-		margin-top: 18px;
-	}
-	.nav-body .logo {
-		width: 20%;
-	}
-
-	.link-group .banner-link {
-		font-size: 18px;
-		padding: 13px 30px;
-		margin: 0 10px;
-	}
-}
-
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	.nav-body .nav-list {
 		display: flex;
 		justify-content: flex-end;
@@ -404,7 +383,25 @@ header .nav-body {
 	.mob-nav {
 		display: block;
 	}
+}
 
+@media (min-width: 768px) and (max-width: 991px) {
+	.mob-nav {
+		width: 40%;
+	}
+
+	.nav-body .logo {
+		width: 20%;
+	}
+
+	.link-group .banner-link {
+		font-size: 18px;
+		padding: 13px 30px;
+		margin: 0 10px;
+	}
+}
+
+@media (max-width: 767px) {
 	.banner-content .banner-title {
 		font-size: 25px;
 		margin-bottom: 30px;
@@ -552,10 +549,6 @@ header .nav-body {
 	cursor: pointer;
 	position: relative;
 	z-index: 0;
-}
-
-.virtue-img .virtue-item:hover {
-	color: #ffffff;
 }
 
 .virtue .virtue-title {
@@ -784,11 +777,6 @@ header .nav-body {
 	text-transform: uppercase;
 	margin: 10px 0;
 	cursor: pointer;
-}
-
-.features-main .side-option:hover {
-	color: #ffffff;
-	background-color: #ff0036;
 }
 
 .side-option .option-wrap {
@@ -1089,14 +1077,6 @@ header .nav-body {
 	margin: 20px 12px 0;
 }
 
-.teamwork-cards .teamwork-card:hover {
-	border: 1px solid #262626;
-}
-
-.teamwork-cards .teamwork-card:hover .card-contact {
-	width: 100%;
-}
-
 .teamwork-card .card-photo {
 	width: 100%;
 	height: 240px;
@@ -1141,6 +1121,26 @@ header .nav-body {
 	color: #505050;
 	padding-top: 25px;
 	padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+	.teamwork-cards .teamwork-card:hover {
+		border: 1px solid #262626;
+	}
+
+	.teamwork-cards .teamwork-card:hover .card-contact {
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.teamwork-cards .teamwork-card:focus {
+		border: 1px solid #262626;
+	}
+
+	.teamwork-cards .teamwork-card:focus .card-contact {
+		width: 100%;
+	}
 }
 
 /* Skills section */
@@ -1314,14 +1314,6 @@ header .nav-body {
 .service-title .service-icon_item {
 	font-size: 24px;
 	color: #272727;
-}
-.services-main .service-item:hover .service-icon_item {
-	color: #ffffff;
-}
-
-.service-item:hover .service-desc {
-	color: #ffffff;
-	background-color: #3d2329;
 }
 
 .service-icons {
@@ -1734,10 +1726,6 @@ header .nav-body {
 .follow-icon-wrap .canvas-icon_wrap {
 	color: #ff0036;
 	font-size: 25px;
-}
-
-.canvas-icon_wrap:hover {
-	color: #ffffff;
 }
 
 .followIcon {

@@ -47,11 +47,12 @@ export function drawFAicons(arg) {
 
 		virtue_item[index].addEventListener("mouseover", function () {
 			polygonCtx.clearRect(0, 0, element.width, element.height);
-
+			virtue_item[index].style.color = "#ffffff";
 			canvasTool.drawPolygon(element, polygonCtx, arg.params.active);
 		});
 		virtue_item[index].addEventListener("mouseout", function () {
 			polygonCtx.clearRect(0, 0, element.width, element.height);
+			virtue_item[index].style.color = "#000000";
 			canvasTool.drawPolygon(element, polygonCtx, arg.params.common);
 		});
 	});
@@ -71,7 +72,8 @@ export function drawFeaturesCheckmarks(arg) {
 
 		side_options[i].addEventListener("mouseover", function () {
 			polygonCtx.clearRect(0, 0, option_icons[i].width, option_icons[i].height);
-
+			side_options[i].style.color = "#ffffff";
+			side_options[i].style.backgroundColor = "#ff0036";
 			canvasTool.drawPolygon(option_icons[i], polygonCtx, arg.params.active);
 
 			iconContext.clearRect(
@@ -85,7 +87,8 @@ export function drawFeaturesCheckmarks(arg) {
 		side_options[i].addEventListener("mouseout", function () {
 			polygonCtx.clearRect(0, 0, option_icons[i].width, option_icons[i].height);
 			canvasTool.drawPolygon(option_icons[i], polygonCtx, arg.params.common);
-
+			side_options[i].style.color = "#262626";
+			side_options[i].style.backgroundColor = "#ffffff";
 			iconContext.clearRect(
 				0,
 				0,
@@ -99,6 +102,8 @@ export function drawFeaturesCheckmarks(arg) {
 
 const service_icons = document.querySelectorAll(".service-icons");
 const service_item = document.querySelectorAll(".service-item");
+const service_iconWrap = document.querySelectorAll(".service-icon_item");
+const service_description = document.querySelectorAll(".service-desc");
 
 export function drawServiceIcons() {
 	const params = {
@@ -118,6 +123,10 @@ export function drawServiceIcons() {
 				service_icons[i].height
 			);
 
+			service_iconWrap[i].style.color = "#ffffff";
+			service_description[i].style.color = "#ffffff";
+			service_description[i].style.backgroundColor = "#3d2329";
+
 			params.fillStyle = "#ff0036";
 			canvasTool.drawPolygon(service_icons[i], serviceCtx, params);
 		});
@@ -128,6 +137,9 @@ export function drawServiceIcons() {
 				service_icons[i].width,
 				service_icons[i].height
 			);
+			service_iconWrap[i].style.color = "#272727";
+			service_description[i].style.color = "#a4a4a4";
+			service_description[i].style.backgroundColor = "#343434";
 
 			params.fillStyle = "#a4a4a4";
 			canvasTool.drawPolygon(service_icons[i], serviceCtx, params);
@@ -154,6 +166,7 @@ export function drawFollowIcons() {
 			followCtx.clearRect(0, 0, followIcons[i].width, followIcons[i].height);
 
 			params.fillStyle = "#ff0036";
+			canvasFollowIcons[i].style.color = "#ffffff";
 
 			canvasTool.drawPolygon(followIcons[i], followCtx, params);
 		});
@@ -162,6 +175,7 @@ export function drawFollowIcons() {
 			followCtx.clearRect(0, 0, followIcons[i].width, followIcons[i].height);
 
 			params.fillStyle = "transparent";
+			canvasFollowIcons[i].style.color = "#ff0036";
 
 			canvasTool.drawPolygon(followIcons[i], followCtx, params);
 		});
