@@ -5,6 +5,7 @@ const canvasCircle = document.querySelector(".loadMoreBtn");
 const canvasArrow = document.querySelector(".loadMoreBtnArrow");
 const canvasWrap = document.querySelector(".canvasBtn-wrap");
 const loadingIcon = document.querySelector(".loadProgress");
+const imageWrap = document.querySelector(".news-img-wrap");
 
 export default function postLoading() {
 	const loadMoreBtnCtx = canvasCircle.getContext("2d");
@@ -62,7 +63,6 @@ export default function postLoading() {
 		template.classList.add("news-block");
 		template.innerHTML = html;
 
-		template.querySelector(".link-image").src = data.image;
 		template.querySelector(".news-title").textContent = data.header;
 
 		const panelIconsLabels = template.querySelectorAll(".panel-item-label");

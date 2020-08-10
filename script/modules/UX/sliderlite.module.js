@@ -24,57 +24,65 @@ const slider_name = document.querySelector(".slider-name");
 const commentInfo = document.querySelector(".comment-info");
 const slider_photo = document.querySelector(".slider-photo");
 const slider_status_items = document.querySelectorAll(".slider-status-item");
+const archive = [];
 
 export default function sliderLite(arg) {
+	let index = 0;
+
 	let sliderContext = slider_photo.getContext("2d");
+	const checkPromises = clients_data.map((obj) => {
+		let image = new Image();
+		image.src = obj.image;
+
+		return new Promise((resolve, reject) => {
+			image.onload = function () {
+				resolve(image);
+			};
+		}).then((image) => archive.push(image));
+	});
+
+	Promise.all(checkPromises).then(() => sliderChanges(index));
 
 	canvasTool.drawPolygon(slider_photo, sliderContext, arg.params);
+	commentInfo.textContent = cutText(150, clients_data[index].comment);
 
-	let index = 1;
-
-	const sliderImage = new Image();
-
-	function setSliderImage() {
+	function setSliderImage(index) {
 		sliderContext.globalCompositeOperation = "source-atop";
 		sliderContext.drawImage(
-			sliderImage,
+			archive[index],
 			0,
 			0,
 			slider_photo.width,
 			slider_photo.height
 		);
 	}
-	sliderChanges(0);
 
-	function sliderChanges() {
+	function sliderChanges(index) {
+		setSliderImage(index);
 		slider_status_items[index].classList.add("_status-item-active");
 		slider_name.textContent = clients_data[index].name;
 
-		commentInfo.classList.add("_comment-info_changing");
 		commentInfo.addEventListener(
 			"transitionend",
 			() => {
-				commentInfo.textContent = clients_data[index].comment;
+				commentInfo.textContent = cutText(150, clients_data[index].comment);
 				commentInfo.classList.remove("_comment-info_changing");
 			},
 			{ once: true }
 		);
-		commentInfo.textContent = cutText(150, clients_data[index].comment);
-		sliderImage.src = clients_data[index].image;
 
-		sliderImage.onload = setSliderImage;
+		setTimeout(function () {
+			if (index == clients_data.length - 1) {
+				index = 0;
+			} else {
+				index++;
+			}
+			for (let item of slider_status_items) {
+				item.classList.remove("_status-item-active");
+			}
+			commentInfo.classList.add("_comment-info_changing");
 
-		if (index == clients_data.length - 1) {
-			index = 0;
-		} else {
-			index++;
-		}
+			sliderChanges(index);
+		}, 3000);
 	}
-
-	const sliderInterval = setInterval(function () {
-		for (let item of slider_status_items) {
-			item.classList.remove("_status-item-active");
-		}
-		sliderChanges();
-	}, 4000);
 }

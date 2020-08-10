@@ -136,14 +136,16 @@ header .nav-body {
 }
 
 .nav-items .nav-item {
-	color: #a4a4a4;
-	font-family: "RalewayRegular", sans-serif;
-	font-size: 18px;
-	text-transform: uppercase;
-	white-space: nowrap;
 	cursor: pointer;
 }
+.nav-item > a {
+	font-size: 18px;
+	color: #a4a4a4;
+	font-family: "RalewayRegular", sans-serif;
 
+	text-transform: uppercase;
+	white-space: nowrap;
+}
 .nav-item::before,
 .nav-item::after {
 	content: "";
@@ -914,7 +916,7 @@ header .nav-body {
 .client-comment .comment-info {
 	font-family: "LatoRegular";
 	font-size: 16px;
-	height: 100px;
+	height: 75px;
 	color: #9e9e9e;
 	text-align: center;
 	margin: 40px 0;
@@ -995,7 +997,7 @@ header .nav-body {
 	font-size: 25px;
 	cursor: pointer;
 	box-shadow: inset 0px 0px 20px 12px rgba(0, 0, 0, 0.4);
-	transition: box-shadow 0.4s ease-in;
+	transition: box-shadow 0.3s ease-in;
 }
 
 .client-block:hover {
@@ -1040,7 +1042,7 @@ header .nav-body {
 	}
 
 	.client-blocks .client-block {
-		padding: 40px 0;
+		padding: 30px 0;
 	}
 	.clients-main {
 		display: flex;
@@ -1060,6 +1062,7 @@ header .nav-body {
 	}
 	.client-comment .comment-info {
 		margin: 25px 0;
+		height: unset;
 	}
 }
 
@@ -1099,6 +1102,7 @@ header .nav-body {
 	height: 240px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: grey;
 }
 
 .card-photo .card-contact {
@@ -1381,7 +1385,6 @@ header .nav-body {
 	margin: 7px;
 	text-align: center;
 	width: 255px;
-	cursor: pointer;
 }
 
 .plan-body:hover .plan-price,
@@ -1438,6 +1441,7 @@ header .nav-body {
 	text-transform: uppercase;
 	font-size: 18px;
 	padding: 12px 0;
+	cursor: pointer;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1674,13 +1678,13 @@ header .nav-body {
 		display: none;
 	}
 	.news-block .news-content-body {
-		border-top: 1px solid #9e9e9e;
 		max-width: 100%;
 	}
 	.news-content-body .news-title {
 		margin-top: 15px;
 	}
 	.blog-main .news-block {
+		border-top: 1px solid #9e9e9e;
 		margin-bottom: 25px;
 		height: unset;
 	}
@@ -1697,6 +1701,7 @@ header .nav-body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;
+	background-color: grey;
 }
 
 .follow-section .follow-body {
@@ -1795,6 +1800,7 @@ header .nav-body {
 	background-image: url();
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: grey;
 }
 
 .contact-main .contact-main-body {
