@@ -63,6 +63,7 @@ export default function postLoading() {
 		template.classList.add("news-block");
 		template.innerHTML = html;
 
+		template.querySelector(".link-image").src = data.image;
 		template.querySelector(".news-title").textContent = data.header;
 
 		const panelIconsLabels = template.querySelectorAll(".panel-item-label");
