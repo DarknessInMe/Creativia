@@ -212,11 +212,10 @@ const message_button = document.querySelector(".contact-btn");
 const popup = document.querySelector(".popup");
 const popupBody = document.querySelector(".popup-body");
 const starterMenu = document.querySelector(".popup-content");
+const form = document.forms["send-message"];
 
 function popupEngine(event, check) {
 	event.preventDefault();
-
-	const form = document.forms["send-message"];
 
 	for (let i = 0; i < form.elements.length - 1; i++) {
 		if (form.elements[i].value == "") {
@@ -226,7 +225,7 @@ function popupEngine(event, check) {
 	}
 
 	if (!check) {
-		const storageDate = new Date();
+		const storageDate = new Date().toLocaleString();
 
 		const formData = {
 			name: form.elements.name.value,
@@ -277,6 +276,9 @@ function popupNavigation(directory, index) {
 	currentWindow.style.display = "none";
 	if (directory == "exit") {
 		popup.classList.remove("popup-active");
+		for (let i = 0; i < form.elements.length - 1; i++) {
+			form.elements[i].value = "";
+		}
 	} else {
 		Array.isArray(navigation[current][directory])
 			? (document.querySelector(

@@ -137,8 +137,6 @@ header .nav-body {
 
 .nav-items .nav-item {
 	cursor: pointer;
-}
-.nav-item > a {
 	font-size: 18px;
 	color: #a4a4a4;
 	font-family: "RalewayRegular", sans-serif;
@@ -146,6 +144,7 @@ header .nav-body {
 	text-transform: uppercase;
 	white-space: nowrap;
 }
+
 .nav-item::before,
 .nav-item::after {
 	content: "";
@@ -156,7 +155,7 @@ header .nav-body {
 	margin: 0 auto;
 	margin-bottom: 25px;
 	margin-top: -3px;
-	transition: width 0.5s ease-out;
+	animation: collapse 0.4s ease-out both;
 }
 .nav-item::after {
 	margin-top: 25px;
@@ -169,7 +168,29 @@ header .nav-body {
 
 .nav-items .nav-item:hover::before,
 .nav-items .nav-item:hover::after {
-	width: 65%;
+	animation: rise 0.4s ease-out both;
+}
+
+@keyframes rise {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 65%;
+	}
+}
+
+@keyframes collapse {
+	0% {
+		width: 65%;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		width: 0;
+		opacity: 0;
+	}
 }
 
 .mobile-menu {
